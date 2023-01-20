@@ -1,0 +1,65 @@
+.container {
+    @media (min-width: 1024px) {
+        padding: 70px 200px;
+    }
+    padding: 20px 30px;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .top-text {
+        display: flex;
+        align-items: center;
+        img {
+            padding-right: 12px;
+        }
+        label {
+            font-size: 20px;
+        }
+    }
+    button {
+        label {
+            font-size: 15px;
+            font-family: "Monda";
+        }
+    }
+}
+
+.divider {
+    margin-top: 10px;
+    margin-bottom: 45px;
+    width: 100%;
+    border-bottom: 2px solid #dddddd;
+}
+
+span {
+    @media (min-width: 1024px) {
+        width: 40%;
+    }
+    @media (max-width: 1023px) {
+        width: 100%;
+    }
+
+    mat-form-field {
+        width: 100%;
+    }
+    label {
+        font-size: 15px;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    button {
+        display: block;
+        margin-right: 0;
+        margin-left: auto;
+        background-color: #3AB72F;
+        label {
+            color: #fff;
+        }
+    }
+}

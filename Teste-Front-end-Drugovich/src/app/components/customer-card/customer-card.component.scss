@@ -1,0 +1,80 @@
+.customer-card {
+    @media (min-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    margin: 7px 0px;
+    padding: 10px;
+    font-family: "Monda";
+    div {
+        width: 380px;
+        @media (min-width: 1024px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .name {
+        @media (min-width: 1024px) {
+            padding-right: 5px;
+        }
+        @media (max-width: 1023px) {
+            display: block;
+        }
+        font-size: 18px;
+    }
+    .number {
+        @media (min-width: 1024px) {
+            padding-right: 20px;
+        }
+        @media (max-width: 1023px) {
+            display: block;
+        }
+        font-size: 12px;
+    }
+    span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90px;
+        
+        .dot-inativo {
+            height: 10px;
+            width: 10px;
+            background-color: red;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot-ativo {
+            height: 10px;
+            width: 10px;
+            background-color: green;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .status {
+            @media (min-width: 1024px) {
+                padding-right: 20px;
+            }
+            @media (max-width: 1023px) {
+                display: block;
+            }
+
+            font-size: 13px;
+        }
+    }
+    button {
+        @media (min-width: 1024px) {
+            padding-right: 20px;
+        }
+        @media (max-width: 1023px) {
+            display: block;
+            margin-right: 0;
+            margin-left: auto;
+        }
+        .label-bt {
+            color: #fff;
+        }
+    }
+}

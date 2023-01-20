@@ -1,0 +1,13 @@
+<mat-card class="customer-card">
+    <div>
+        <label class="name">{{name}}</label>
+        <label class="number">{{cnpj}}</label>
+    </div>
+    <div></div>
+    <span>
+        <div [ngClass]="status == 'Ativo' ? 'dot-ativo' : 'dot-inativo'"></div>
+        <label class="status"> {{status}}</label>
+    </span>
+    <button mat-raised-button color="primary" (click)="goToEdit()"> <label class="label-bt">EDITAR</label>
+    </button>
+</mat-card>

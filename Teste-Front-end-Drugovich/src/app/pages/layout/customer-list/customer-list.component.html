@@ -1,0 +1,23 @@
+<div *ngIf="customerList" class="container">
+    <div class="top">
+        <div class="top-text">
+            <img src="../../../../assets/icon/user.png" />
+            <label>Listagem de Clientes</label>
+        </div>
+        <button mat-raised-button color="accent" (click)="goToCreateEdit()"><span class="material-icons">add</span> <label>NOVO</label>
+        </button>
+    </div>
+    <div class="divider"></div>
+    <span *ngFor="let customer of customerList">
+        <customer-card 
+        [name]="customer.name" 
+        [cnpj]="customer.cnpj" 
+        [status]="customer.status"
+        [id]="customer.id"
+        (edit)="goToCreateEdit($event)"
+        ></customer-card>
+    </span>
+</div>
+<div class="loading">
+    <mat-spinner color="accent" *ngIf="!customerList"></mat-spinner>
+</div>

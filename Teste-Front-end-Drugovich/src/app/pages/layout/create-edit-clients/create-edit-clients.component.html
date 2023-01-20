@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="top">
+        <div class="top-text">
+            <img src="../../../../assets/icon/user.png" />
+            <label>Novo Cliente</label>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <span>
+        <label>Nome</label>
+        <mat-form-field color="accent" appearance="outline">
+            <input  [formControl]="name" matInput>
+            <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </span>
+    <span>
+        <label>CNPJ</label>
+        <mat-form-field color="accent" appearance="outline">
+            <input  [formControl]="cnpj" matInput>
+            <mat-error *ngIf="cnpj.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </span>
+    <span>
+        <label>Status</label>
+        <mat-form-field color="accent" appearance="outline">
+            <mat-select [(value)]="selected">
+                <mat-option value="Ativo">Ativo</mat-option>
+                <mat-option value="Inativo">Inativo</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button (click)="save()"><label>SALVAR</label></button>
+    </span>
+</div>
