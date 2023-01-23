@@ -38,6 +38,7 @@ export class CreateEditClientsComponent implements OnInit {
   save() {
     if (this.name.value?.length == 0 || this.cnpj.value?.length == 0) {
       this.openSnackBar('Por favor preencha todos os campos', 'Fechar')
+      return
     }
     let oldCustomerList = window.history.state.customerList
 
