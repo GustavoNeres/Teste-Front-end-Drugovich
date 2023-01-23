@@ -13,11 +13,11 @@ export class CustomerListComponent implements OnInit {
 
 
   constructor(
-    private ApiService: ApiService,
+    private apiService: ApiService,
     private router: Router,
   ) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
     if (window.history.state.newCustomerList) {
       this.customerList = window.history.state.newCustomerList
     }
@@ -27,17 +27,15 @@ export class CustomerListComponent implements OnInit {
   }
 
   saveCustomerList() {
-    this.ApiService.getCustomerList()
+    this.apiService.getCustomerList()
       .subscribe(customerList => {
         if (customerList) {
-          const specialCharacterRemover = String(customerList).replace(/\n/g, '').replace(/(?<=\s+.*)\s+/g, '')
-          const convertJSON = JSON.parse(JSON.stringify(specialCharacterRemover))
-          this.customerList = eval(convertJSON)
+          this.customerList = eval(customerList)
         }
       })
   }
 
   goToCreateEdit(id?: number) {
-    this.router.navigate(['create-edit-clients'], { state: { customerList: this.customerList, id: id ? id : null} })
+    this.router.navigate(['create-edit-clients'], { state: { customerList: this.customerList, id: id ? id : null } })
   }
 }
