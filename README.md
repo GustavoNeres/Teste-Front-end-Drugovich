@@ -1,4 +1,4 @@
-# Projeto feito para fins de avalição
+# Projeto Angular
 
 O Projeto foi criado e editado integralmente com ferramentas do Angular e Material UI
 
